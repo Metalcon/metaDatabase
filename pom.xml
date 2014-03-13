@@ -22,14 +22,14 @@
       <url>http://metalcon2.physik.uni-mainz.de:8080/mvn/</url>
     </repository>
   </repositories>
-  
+
   <properties>
     <!-- version of testing framework JUnit -->
     <junit.version>4.5</junit.version>
-    
+
     <!-- version of JSON dependency -->
     <json.version>1.1</json.version>
-    
+
     <!-- version of mongoDB driver -->
     <mongoDB.version>2.11.2</mongoDB.version>
   </properties>
