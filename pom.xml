@@ -1,7 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>de.metalcon</groupId>
+    <artifactId>pom</artifactId>
+    <version>0.0.1</version>
+  </parent>
+  
   <modelVersion>4.0.0</modelVersion>
-  <groupId>de.metalcon.utils</groupId>
-  <artifactId>meta-database</artifactId>
+  <artifactId>utils-meta-database</artifactId>
   <version>1.0.2</version>
   <packaging>jar</packaging>
   
@@ -9,69 +14,19 @@
   <description>Basic database for meta data stored as JSON using a running MongoDB</description>
   <url>https://github.com/renepickhardt/metalcon</url>
   
-  <licenses>
-    <license>
-      <name>GNU General Public License 3.0</name>
-      <url>http://www.gnu.org/licenses/gpl.html</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
+  <repositories>
+    <!-- Metalcon repository to resolve dependencies from -->
+  	<repository>
+  		<id>metalcon-depend</id>
+  		<url>http://metalcon2.physik.uni-mainz.de:8080/mvn/</url>
+  	</repository>
+  </repositories>
   
-  <scm>
-    <connection>scm:git:https://github.com/renepickhardt/metalcon</connection>
-    <developerConnection>scm:git:https://github.com/renepickhardt/metalcon</developerConnection>
-    <url>https://github.com/renepickhardt/metalcon</url>
-  </scm>
-  
-  <developers>
-    <developer>
-      <id>sebschlicht</id>
-      <name>Sebastian Schlicht</name>
-      <email>sebschlicht@uni-koblenz.de</email>
-      <roles>
-        <role>developer</role>
-      </roles>
-    </developer>
-  </developers>
-  
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.0</version>
-        <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>2.2.1</version>
-      </plugin>
-    </plugins>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.wagon</groupId>
-	    <artifactId>wagon-ssh</artifactId>
-      </extension>
-    </extensions>
-  </build>
-  <distributionManagement>
-    <repository>
-      <id>metalcon-repo</id>
-      <uniqueVersion>false</uniqueVersion>
-      <name>Metalcon Repository</name>
-      <url>scp://metalcon2.physik.uni-mainz.de/metalcon-mvn/</url>
-      <layout>default</layout>
-    </repository>
-  </distributionManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.0</version>
+      <version>4.5</version>
       <scope>test</scope>
     </dependency>
     <dependency>
