@@ -13,7 +13,7 @@
 
   <name>MetaDatabase</name>
   <description>Basic database for meta data stored as JSON using a running MongoDB</description>
-  <url>https://github.com/renepickhardt/metalcon</url>
+  <url>https://github.com/Metalcon/metaDatabase</url>
 
   <repositories>
     <!-- Metalcon repository to resolve dependencies from -->
@@ -30,7 +30,7 @@
     <!-- version of mongoDB driver -->
     <mongoDB.version>2.11.2</mongoDB.version>
     
-    <!-- version of JSON dependency -->
+    <!-- version of JSON -->
     <json.version>1.1</json.version>
   </properties>
 
